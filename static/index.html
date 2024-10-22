@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Collecte de données pour le projet NLP. Participez à l'amélioration de nos modèles linguistiques.">
+    <title>Collecte de Données NLP</title>
+    <link rel="stylesheet" href="/static/style.css"> <!-- Assurez-vous que le fichier CSS est dans le dossier static -->
+</head>
+<body>
+    <header>
+        <h1>Collecte de Données pour le Projet NLP</h1>
+    </header>
+    
+    <main id="app-container">
+        <aside id="sidebar">
+            <h2>Catégories</h2>
+            <div id="category-container" role="navigation"></div>
+        </aside>
+
+        <section id="main-content">
+            <div id="gift-count" aria-live="polite">Cadeaux remportés : <span id="gift-number">0</span><span>🎁</span></div>
+
+            <h2 id="subcategory-title" class="hidden">Choisissez une sous-catégorie :</h2>
+            <div id="subcategory-container" class="hidden"></div>
+
+            <h2 id="language-title" class="hidden">Choisissez une langue :</h2>
+            <select id="language-select" class="hidden" aria-labelledby="language-title">
+                <option value="" disabled selected>Sélectionnez une langue</option>
+            </select>
+
+            <form id="translation-form" class="hidden" aria-labelledby="translation-label">
+                <label for="translation" id="translation-label">Entrez votre traduction :</label>
+                <input type="text" id="translation" name="translation" required>
+                <button type="submit" id="submit-button" style="margin-bottom: 50px;">Soumettre</button>
+            </form>
+
+            <div id="gift-message" class="hidden"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Collecte de Données NLP. Tous droits réservés.</p>
+    </footer>
+    <script src="/static/script.js"></script> <!-- Assurez-vous que le fichier JS est dans le dossier static -->
+</body>
+</html>

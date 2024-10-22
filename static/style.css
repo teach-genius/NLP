@@ -1,0 +1,211 @@
+/* Réinitialisation des styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corps de la page */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Hauteur de la fenêtre */
+    overflow: hidden; /* Empêche le défilement */
+}
+
+/* En-tête */
+header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Titre */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Conteneur de l'application */
+#app-container {
+    display: flex;
+    height: calc(100% - 80px); /* Ajuste la hauteur pour le header */
+}
+
+/* Barre latérale */
+#sidebar {
+    background-color: #fff;
+    border-right: 1px solid #ddd;
+    width: 200px; /* Largeur fixe pour la barre latérale */
+    padding: 20px;
+    overflow-y: auto; /* Permet le défilement si nécessaire */
+}
+
+/* Contenu principal */
+#main-content {
+    padding: 20px;
+    width: calc(100% - 200px); /* Ajuste la largeur pour tenir compte de la barre latérale */
+    overflow-y: auto; /* Permet le défilement dans la zone principale si nécessaire */
+    display: flex; /* Utilise flex pour aligner les éléments */
+    flex-direction: column; /* Aligne les éléments verticalement */
+    align-items: center; /* Centre horizontalement */
+}
+
+/* Compteur de cadeaux */
+#gift-count {
+    margin: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Sections des sous-catégories et des langues */
+#subcategory-container,
+#language-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+/* Cartes pour les catégories et sous-catégories */
+.category-cell,
+.subcategory-cell,
+.language-cell {
+    background: white;
+    border-radius: 12px;
+    padding: 10px; /* Ajuste le padding pour plus d'espace */
+    margin: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 120px; /* Largeur des cellules */
+    height: 120px; /* Hauteur des cellules */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex; /* Utilise flex pour centrer le contenu */
+    flex-direction: column; /* Aligne le contenu verticalement */
+    align-items: center; /* Centre horizontalement */
+    justify-content: center; /* Centre verticalement */
+}
+
+.category-cell:hover,
+.subcategory-cell:hover,
+.language-cell:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Icônes des catégories */
+.category-icon {
+    width: 50px; /* Largeur fixe de l'icône */
+    height: 50px; /* Hauteur fixe de l'icône */
+    display: block;
+    margin-bottom: 10px; /* Espace entre l'icône et le texte */
+}
+
+/* Formulaire de traduction */
+#translation-form {
+    display: none; /* Masquer le formulaire de traduction par défaut */
+    flex-direction: column;
+    align-items: center; /* Centre les éléments */
+    margin-top: 10px; /* Ajuste la marge pour le positionner à 10px sous les sous-catégories */
+}
+
+
+/* Éléments du formulaire */
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Input de traduction */
+input[type="text"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 80%; /* Largeur de l'input */
+    margin-bottom: 10px; /* Espace sous l'input */
+}
+
+/* Bouton de soumission */
+button {
+    padding: 10px 20px;
+    background-color: #6a11cb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2575fc; /* Change la couleur au survol */
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    background-color: #6a11cb;
+    color: white;
+    position: relative; /* Changez en relative */
+    bottom: 0; /* Positionne le footer tout en bas */
+    width: 100%;
+}
+
+/* Styles pour le message de cadeau */
+#gift-message {
+    margin: 20px;
+    font-size: 1.2rem;
+    color: green;
+    text-align: center;
+}
+
+/* Styles pour l'icône de cadeau */
+.gift-icon {
+    width: 30px; /* Taille de l'icône */
+    height: 30px; /* Taille de l'icône */
+    vertical-align: middle; /* Aligne verticalement avec le texte */
+    margin-right: 5px; /* Espace à droite de l'icône */
+}
+
+.hidden {
+    display: none; /* Classe pour masquer les éléments */
+}
+
+.selected-subcategory {
+    background-color: #e0f7fa; /* Couleur de fond pour la sélection */
+    border: 2px solid #00796b; /* Bordure pour la sélection */
+}
+
+/* Conteneur pour la sélection des langues */
+#language-container {
+    display: flex;
+    flex-direction: column; /* Aligne verticalement les cellules de langue */
+    align-items: center; /* Centre les éléments */
+    margin: 20px 0; /* Marge autour du conteneur */
+}
+
+/* Cellules de langue */
+.language-cell {
+    background: white;
+    border-radius: 12px;
+    padding: 10px; /* Ajuste le padding pour plus d'espace */
+    margin: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 150px; /* Largeur des cellules de langue */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Effet au survol des cellules de langue */
+.language-cell:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
