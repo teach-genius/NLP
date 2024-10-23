@@ -238,15 +238,14 @@ footer {
 
     .category-cell, .subcategory-cell, .language-cell {
         padding-top:5px;
-        max-width: 100%;           /* Largeur dynamique avec flex */
-        max-height: 100%;            /* Hauteur fixe des cellules */
+        max-width: 100px;           /* Largeur dynamique avec flex */
+        max-height: 100px;            /* Hauteur fixe des cellules */
         margin: 5px;              /* Ajoute un petit espace entre les cellules */
     }
 
     .category-cell img, .subcategory-cell img, .language-cell img {
-        padding-top:5px;
-        max-width: 70%;           /* Limite la largeur des images */
-        max-height: 70%;          /* Limite la hauteur des images */
+        max-width: 100%;           /* Limite la largeur des images */
+        max-height: 100%;          /* Limite la hauteur des images */
         object-fit: contain;      /* Conserve les proportions de l'image */
     }
 
