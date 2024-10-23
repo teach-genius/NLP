@@ -219,7 +219,7 @@ footer {
         width: 100%;
         border-right: none;
         border-bottom: 1px solid #ddd;
-        height:30px;
+
     }
 
     #main-content {
@@ -233,6 +233,10 @@ footer {
 
     h1 {
         font-size: 2rem;
+    }
+
+    #category-container{
+        height: 50%px;
     }
 }
 
