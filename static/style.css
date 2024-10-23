@@ -216,8 +216,10 @@ footer {
 
     #sidebar {
         width: 100%;
+        height: 100%;
         border-right: none;
         border-bottom: 1px solid #ddd;
+        
     }
 
     #main-content {
@@ -265,6 +267,7 @@ footer {
         border: none;             /* Enlève la bordure par défaut */
         border-radius: 5px;      /* Bords arrondis pour le bouton */
         cursor: pointer;          /* Curseur en forme de main au survol */
+        margin-bottom:10px;
     }
 
     h1 {
