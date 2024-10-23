@@ -234,7 +234,7 @@ footer {
         white-space: nowrap;      /* Empêche le retour à la ligne des éléments */
         padding: 10px;            /* Ajoute un peu d'espace autour */
         box-sizing: border-box;   /* Inclut le padding dans les dimensions */
-        height: 130px;  
+        height: 145px;  
     }
 
     .category-cell, .subcategory-cell, .language-cell {
