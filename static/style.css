@@ -210,3 +210,43 @@ footer {
     transform: translateY(-5px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+
+/* Media Queries */
+@media (max-width: 768px) {
+    #sidebar {
+        width: 100%; /* Rendre la barre latérale pleine largeur */
+        border-right: none; /* Retirer la bordure à droite */
+        border-bottom: 1px solid #ddd; /* Ajouter une bordure en bas */
+    }
+
+    #main-content {
+        width: 100%; /* Largeur pleine pour le contenu principal */
+    }
+
+    .category-cell, .subcategory-cell, .language-cell {
+        flex: 0 1 100px; /* Réduire la largeur des cellules */
+        max-width: 80%; /* Largeur max pour les cellules */
+    }
+
+    h1 {
+        font-size: 2rem; /* Réduire la taille du titre */
+    }
+}
+
+@media (max-width: 480px) {
+    #translation-form {
+        width: 90%; /* Réduire la largeur du formulaire */
+    }
+
+    .category-cell, .subcategory-cell, .language-cell {
+        flex: 0 1 80px; /* Réduire encore plus la largeur des cellules */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Réduire encore la taille du titre */
+    }
+
+    button {
+        width: 100%; /* Rendre le bouton pleine largeur */
+    }
+}
