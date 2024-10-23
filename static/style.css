@@ -219,73 +219,73 @@ footer {
 
     #sidebar {
         margin: 0;
-        padding: 0;
+        padding: 0 10px;        /* Ajout de padding pour l'espacement */
         width: 100%;
-        border-right: none;
+        border: none;           /* Suppression des bordures non nécessaires */
         border-bottom: 1px solid #ddd;
     }
 
-  
-
-    #main-content {
-        width: 100%;
+    #main-content,
+    #category-container {
+        width: 100%;            /* Assure que ces éléments occupent toute la largeur */
     }
 
     #category-container {
-        display: flex;             /* Utilise flexbox pour l'alignement horizontal */
-        overflow-x: auto;         /* Active le défilement horizontal */
-        white-space: nowrap;      /* Empêche le retour à la ligne des éléments */
-        padding: 10px;            /* Ajoute un peu d'espace autour */
-        box-sizing: border-box;   /* Inclut le padding dans les dimensions */
+        display: flex;          
+        overflow-x: auto;       
+        white-space: nowrap;    
+        padding: 10px;         
+        box-sizing: border-box; 
         height: 60%; 
     }
 
     .category-cell, .subcategory-cell, .language-cell {
-        padding-top:5px;
-        max-width: 100px;           /* Largeur dynamique avec flex */
-        max-height: 100px;            /* Hauteur fixe des cellules */
-        margin: 5px;              /* Ajoute un petit espace entre les cellules */
+        padding-top: 5px;
+        max-width: 100px;      
+        height: 100px;         /* Fixe la hauteur des cellules ici */
+        margin: 5px;           
     }
 
-    .category-cell img, .subcategory-cell img, .language-cell img {
-        max-width: 100%;           /* Limite la largeur des images */
-        max-height: 100%;          /* Limite la hauteur des images */
-        object-fit: contain;      /* Conserve les proportions de l'image */
+    .category-cell img,
+    .subcategory-cell img,
+    .language-cell img {
+        max-width: 100%;       
+        max-height: 100%;      
+        object-fit: contain;    
     }
 
     h1 {
-        font-size: 1rem;          /* Taille du titre */
+        font-size: 1rem;        
     }
 
     h2 {
-    font-size: 1.5rem;
-    text-align: center;
-}
+        font-size: 1.5rem;
+        text-align: center;
+    }
 }
 
 @media (max-width: 480px) {
     h1 {
-        font-size: 1.8rem;        /* Ajuste la taille du titre pour les petits écrans */
+        font-size: 1.8rem;       
     }
 
     #sidebar {
-        padding: 10px;            /* Padding pour la barre latérale */
+        padding: 10px;          
     }
 
-    .category-cell, .subcategory-cell, .language-cell {
-        flex: 0 1 80px;           /* Ajuste la largeur des cellules */
-        height: 80px;             /* Ajuste la hauteur des cellules */
+    .category-cell,
+    .subcategory-cell,
+    .language-cell {
+        flex: 0 1 80px;         
+        height: 80px;           
     }
 
-    input[type="text"] {
-        width: 100%;              /* L'input remplit la largeur */
-    }
-
+    input[type="text"],
     button {
-        width: 100%;              /* Le bouton remplit la largeur */
+        width: 100%;            
     }
 
     #translation-form {
-        padding: 10px;            /* Padding pour le formulaire */
+        padding: 10px;          
     }
 }
