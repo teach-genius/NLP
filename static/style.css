@@ -238,7 +238,6 @@ footer {
         padding: 10px;            /* Ajoute un peu d'espace autour */
         box-sizing: border-box;   /* Inclut le padding dans les dimensions */
         height: 60%; 
-       position: fixed; 
     }
 
     .category-cell, .subcategory-cell, .language-cell {
