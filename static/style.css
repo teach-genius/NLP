@@ -80,12 +80,13 @@ h1 {
 .language-cell {
     background: white;
     border-radius: 12px;
-    padding: 10px; /* Ajuste le padding pour plus d'espace */
+    padding: 15px; /* Ajuste le padding pour plus d'espace */
     margin: 10px;
     text-align: center;
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
-    width: 120px; /* Largeur des cellules */
+    flex: 0 1 150px; /* Flex pour une largeur dynamique */
+    max-width: 120px; /* Largeur max pour les cellules */
     height: 120px; /* Hauteur des cellules */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex; /* Utilise flex pour centrer le contenu */
@@ -199,7 +200,8 @@ footer {
     text-align: center;
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
-    width: 150px; /* Largeur des cellules de langue */
+    flex: 0 1 150px; /* Flex pour une largeur dynamique */
+    max-width: 120px; /* Largeur max pour les cellules */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -219,7 +221,6 @@ footer {
         width: 100%;
         border-right: none;
         border-bottom: 1px solid #ddd;
-     
     }
 
     #main-content {
@@ -236,16 +237,9 @@ footer {
     }
 
     .category-cell, .subcategory-cell, .language-cell {
-        width: 100px;             /* Largeur fixe des cellules */
+        flex: 0 1 100px;          /* Largeur dynamique avec flex */
         height: 100px;            /* Hauteur fixe des cellules */
         margin: 5px;              /* Ajoute un petit espace entre les cellules */
-        display: flex;            /* Utilise flex pour centrer le contenu */
-        justify-content: center;  /* Centre horizontalement */
-        align-items: center;      /* Centre verticalement */
-        background-color: #f9f9f9; /* Couleur de fond légère */
-        border: 1px solid #ddd;   /* Bordure légère */
-        border-radius: 5px;       /* Bords arrondis */
-        overflow: hidden;         /* Cache tout débordement d'éléments internes */
     }
 
     .category-cell img, .subcategory-cell img, .language-cell img {
@@ -269,11 +263,19 @@ footer {
     }
 
     .category-cell, .subcategory-cell, .language-cell {
-        width: 80px;              /* Largeur fixe pour les petits écrans */
-        height: 80px;             /* Hauteur fixe pour les petits écrans */
+        flex: 0 1 80px;           /* Ajuste la largeur des cellules */
+        height: 80px;             /* Ajuste la hauteur des cellules */
+    }
+
+    input[type="text"] {
+        width: 100%;              /* L'input remplit la largeur */
     }
 
     button {
-        width: 100%;              /* Largeur complète pour les boutons */
+        width: 100%;              /* Le bouton remplit la largeur */
+    }
+
+    #translation-form {
+        padding: 10px;            /* Padding pour le formulaire */
     }
 }
