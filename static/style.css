@@ -251,6 +251,22 @@ footer {
         object-fit: contain;      /* Conserve les proportions de l'image */
     }
 
+    .subcategory-cell {
+        flex-direction: column;   /* Aligne le contenu de la sous-catégorie verticalement */
+        justify-content: space-between; /* Éspace entre les éléments */
+    }
+
+    .submit-button {
+        margin-top: 5px;          /* Espace au-dessus du bouton */
+        width: 100%;              /* Largeur complète pour le bouton */
+        padding: 10px;            /* Padding pour le bouton */
+        background-color: #4CAF50; /* Couleur de fond pour le bouton */
+        color: white;             /* Couleur du texte du bouton */
+        border: none;             /* Enlève la bordure par défaut */
+        border-radius: 5px;      /* Bords arrondis pour le bouton */
+        cursor: pointer;          /* Curseur en forme de main au survol */
+    }
+
     h1 {
         font-size: 2rem;          /* Taille du titre */
     }
