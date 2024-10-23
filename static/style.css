@@ -237,14 +237,15 @@ footer {
     }
 
     .category-cell, .subcategory-cell, .language-cell {
-        flex: 0 1 100px;          /* Largeur dynamique avec flex */
+        width:100px;          /* Largeur dynamique avec flex */
         height: 100px;            /* Hauteur fixe des cellules */
         margin: 5px;              /* Ajoute un petit espace entre les cellules */
     }
 
     .category-cell img, .subcategory-cell img, .language-cell img {
-        max-width: 90%;           /* Limite la largeur des images */
-        max-height: 90%;          /* Limite la hauteur des images */
+        padding-top:10px;
+        max-width: 50%;           /* Limite la largeur des images */
+        max-height: 50%;          /* Limite la hauteur des images */
         object-fit: contain;      /* Conserve les proportions de l'image */
     }
 
