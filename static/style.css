@@ -213,9 +213,7 @@ footer {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    #app-container {
-        flex-direction: column; /* Empile la barre latérale et le contenu principal */
-    }
+    
 
     #sidebar {
         margin: 0;
