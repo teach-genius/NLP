@@ -21,11 +21,11 @@ document.addEventListener('DOMContentLoaded', async function () {
     // Fonction pour récupérer les données depuis la base de données
     async function fetchData() {
         try {
-            const response = await fetch('http://127.0.0.1:8000/categorie/');
+            const response = await fetch('https://gabonlanguage.onrender.com/categorie/');
             const categoriesData = await response.json();
             categories = categoriesData.categories;
 
-            const langResponse = await fetch('http://127.0.0.1:8000/langue/');
+            const langResponse = await fetch('https://gabonlanguage.onrender.com/langue/');
             const langData = await langResponse.json();
             languages = langData.languages;
 
@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                     traduction: translationValue
                 };
 
-                const response = await fetch('http://127.0.0.1:8000/api/traduction/', {
+                const response = await fetch('https://gabonlanguage.onrender.com/api/traduction/', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
