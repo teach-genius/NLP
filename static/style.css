@@ -212,22 +212,26 @@ footer {
 }
 
 
-
 /* Media Queries */
 @media (max-width: 768px) {
     #sidebar {
         width: 100%; /* Rendre la barre latérale pleine largeur */
         border-right: none; /* Retirer la bordure à droite */
         border-bottom: 1px solid #ddd; /* Ajouter une bordure en bas */
+        overflow: hidden; /* Éviter le débordement de contenu */
     }
 
     #main-content {
         width: 100%; /* Largeur pleine pour le contenu principal */
+        overflow: auto; /* Permettre le défilement si le contenu déborde */
     }
 
     .category-cell, .subcategory-cell, .language-cell {
         flex: 0 1 100px; /* Réduire la largeur des cellules */
         max-width: 80%; /* Largeur max pour les cellules */
+        overflow: hidden; /* Éviter le débordement de texte */
+        white-space: nowrap; /* Empêcher le texte de passer à la ligne */
+        text-overflow: ellipsis; /* Afficher des points de suspension pour le texte trop long */
     }
 
     h1 {
@@ -270,6 +274,8 @@ footer {
     .game-area {
         width: 100%; /* S'assurer que la zone de jeu prend tout l'espace */
         height: auto; /* Hauteur automatique pour s'adapter à l'écran */
+        min-height: 300px; /* Hauteur minimale pour la zone de jeu */
+        overflow: auto; /* Permettre le défilement si le contenu déborde */
     }
 }
 
