@@ -167,4 +167,18 @@ document.addEventListener('DOMContentLoaded', async function () {
             giftMessage.style.display = 'block';
         }
     });
+
+
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('header');
+        const title = document.querySelector('h1');
+        const scrollPosition = window.scrollY;
+
+        if (scrollPosition > 50) {
+            title.style.transform = 'translateY(-100%)'; // Déplace le titre vers le haut
+        } else {
+            title.style.transform = 'translateY(0)'; // Ramène le titre
+        }
+    });
+    
 });
