@@ -208,7 +208,6 @@ footer {
     transform: translateY(-5px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
-
 /* Responsive Styles */
 @media (max-width: 768px) {
     #app-container {
@@ -219,42 +218,59 @@ footer {
         width: 100%;
         border-right: none;
         border-bottom: 1px solid #ddd;
-
     }
 
     #main-content {
         width: 100%;
     }
 
+    #category-container {
+        display: flex;             /* Utilise flexbox pour l'alignement horizontal */
+        overflow-x: auto;         /* Active le défilement horizontal */
+        white-space: nowrap;      /* Empêche le retour à la ligne des éléments */
+        padding: 10px;            /* Ajoute un peu d'espace autour */
+        box-sizing: border-box;   /* Inclut le padding dans les dimensions */
+    }
+
     .category-cell, .subcategory-cell, .language-cell {
-        width: 100px;
-        height: 100px;
+        width: 100px;             /* Largeur fixe des cellules */
+        height: 100px;            /* Hauteur fixe des cellules */
+        margin: 5px;              /* Ajoute un petit espace entre les cellules */
+        display: flex;            /* Utilise flex pour centrer le contenu */
+        justify-content: center;  /* Centre horizontalement */
+        align-items: center;      /* Centre verticalement */
+        background-color: #f9f9f9; /* Couleur de fond légère */
+        border: 1px solid #ddd;   /* Bordure légère */
+        border-radius: 5px;       /* Bords arrondis */
+        overflow: hidden;         /* Cache tout débordement d'éléments internes */
+    }
+
+    .category-cell img, .subcategory-cell img, .language-cell img {
+        max-width: 90%;           /* Limite la largeur des images */
+        max-height: 90%;          /* Limite la hauteur des images */
+        object-fit: contain;      /* Conserve les proportions de l'image */
     }
 
     h1 {
-        font-size: 2rem;
-    }
-
-    #category-container{
-        height: 100px;
+        font-size: 2rem;          /* Taille du titre */
     }
 }
 
 @media (max-width: 480px) {
     h1 {
-        font-size: 1.8rem;
+        font-size: 1.8rem;        /* Ajuste la taille du titre pour les petits écrans */
     }
 
     #sidebar {
-        padding: 10px;
+        padding: 10px;            /* Padding pour la barre latérale */
     }
 
     .category-cell, .subcategory-cell, .language-cell {
-        width: 80px;
-        height: 80px;
+        width: 80px;              /* Largeur fixe pour les petits écrans */
+        height: 80px;             /* Hauteur fixe pour les petits écrans */
     }
 
     button {
-        width: 100%;
+        width: 100%;              /* Largeur complète pour les boutons */
     }
 }
