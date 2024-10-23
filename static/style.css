@@ -117,7 +117,6 @@ h1 {
     margin-top: 10px; /* Ajuste la marge pour le positionner à 10px sous les sous-catégories */
 }
 
-
 /* Éléments du formulaire */
 label {
     margin-bottom: 5px;
@@ -208,4 +207,49 @@ footer {
 .language-cell:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #app-container {
+        flex-direction: column; /* Empile la barre latérale et le contenu principal */
+    }
+
+    #sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    #main-content {
+        width: 100%;
+    }
+
+    .category-cell, .subcategory-cell, .language-cell {
+        width: 100px;
+        height: 100px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    #sidebar {
+        padding: 10px;
+    }
+
+    .category-cell, .subcategory-cell, .language-cell {
+        width: 80px;
+        height: 80px;
+    }
+
+    button {
+        width: 100%;
+    }
 }
