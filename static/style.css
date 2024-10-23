@@ -211,6 +211,8 @@ footer {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+
+
 /* Media Queries */
 @media (max-width: 768px) {
     #sidebar {
@@ -248,5 +250,40 @@ footer {
 
     button {
         width: 100%; /* Rendre le bouton pleine largeur */
+    }
+
+    /* Ajout de styles pour un jeu responsive */
+    .game-button {
+        padding: 15px;
+        font-size: 1.2rem; /* Ajustement de la taille de police */
+        border: none;
+        border-radius: 5px;
+        background-color: #007BFF;
+        color: white;
+        cursor: pointer;
+    }
+
+    .game-button:hover {
+        background-color: #0056b3; /* Changement de couleur au survol */
+    }
+
+    .game-area {
+        width: 100%; /* S'assurer que la zone de jeu prend tout l'espace */
+        height: auto; /* Hauteur automatique pour s'adapter à l'écran */
+    }
+}
+
+/* Styles pour les écrans très petits */
+@media (max-width: 320px) {
+    h1 {
+        font-size: 1.2rem; /* Réduction supplémentaire de la taille du titre */
+    }
+
+    .category-cell, .subcategory-cell, .language-cell {
+        flex: 0 1 60px; /* Réduire encore plus la largeur des cellules */
+    }
+
+    .game-button {
+        font-size: 1rem; /* Ajustement de la taille de police pour les petits écrans */
     }
 }
