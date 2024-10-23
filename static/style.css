@@ -254,8 +254,13 @@ footer {
     }
 
     h1 {
-        font-size: 2rem;          /* Taille du titre */
+        font-size: 1rem;          /* Taille du titre */
     }
+
+    h2 {
+    font-size: 1.5rem;
+    text-align: center;
+}
 }
 
 @media (max-width: 480px) {
