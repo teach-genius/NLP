@@ -218,10 +218,14 @@ footer {
     }
 
     #sidebar {
+        margin: 0;
+        padding: 0;
         width: 100%;
         border-right: none;
         border-bottom: 1px solid #ddd;
     }
+
+  
 
     #main-content {
         width: 100%;
